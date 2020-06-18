@@ -1,0 +1,5 @@
+<apex:page showHeader="true" setup="false" sidebar="false" readonly="true" >
+hey! welcome to vf <br/>
+thanks
+ 
+</apex:page>

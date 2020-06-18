@@ -1,0 +1,16 @@
+<apex:page controller="ShowAllLeads" sidebar="false" setup="false" tabstyle="Position__c" >
+<apex:sectionHeader title="leads" subtitle="Unconverted Leads"/>
+<apex:form >
+<apex:pageBlock title="Lead Records:  {!lstld.size}">
+<apex:pageBlockTable value="{!lstld}" var="ld">
+<apex:column value="{!ld.id}" />
+<apex:column value="{!ld.name}"/>
+<apex:column value="{!ld.status}"/>
+<apex:column value="{!ld.company}"/>
+<apex:column value="{!ld.phone}"/>
+</apex:pageBlockTable>
+
+</apex:pageBlock>
+</apex:form>
+  
+</apex:page>

@@ -1,0 +1,29 @@
+<apex:page controller="AccountSearch" setup="false" sidebar="false" tabstyle="account" >
+<apex:sectionHeader title="SEARCH" subtitle="Search Accounts"/>
+<apex:form >
+<apex:pageBlock title="Search accounts">
+<apex:pageBlockButtons location="top">
+<apex:commandButton value="search accounts" action="{!AccountSearch}" rerender="pg"/>
+</apex:pageBlockButtons>
+<apex:pageBlockSection title="search accouts" columns="2" collapsible="false">
+<apex:inputText label="Enter Account Name" html-placeholder="enter account name" value="{!searchtext}"/>
+<apex:commandButton value="Search Accounts" action="{!AccountSearch}" rerender="pg"/>
+</apex:pageBlockSection>
+</apex:pageBlock>
+<apex:pageBlock title="Search Results : {!lstacc.size}" id="pg">
+<apex:pageBlockTable value="{!lstacc}" var="acc">
+<apex:column headerValue="AccountName">
+<apex:outputLink value="/{!acc.id}" target="_blank">
+{!acc.name}
+</apex:outputLink>
+</apex:column>
+<apex:column value="{!acc.rating}"/>
+<apex:column value="{!acc.phone}"/>
+<apex:column value="{!acc.type}"/>
+
+</apex:pageBlockTable>
+</apex:pageBlock>
+
+</apex:form>
+  
+</apex:page>

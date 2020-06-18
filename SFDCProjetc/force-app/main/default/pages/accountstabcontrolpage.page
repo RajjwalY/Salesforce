@@ -1,0 +1,16 @@
+<apex:page setup="false" showHeader="true" standardController="Account" tabStyle="account">
+<apex:tabPanel switchType="ajax" >
+<apex:tab label="accountdetails" name="Account">
+<apex:detail inlineEdit="true" relatedList="true" title="true"/>
+</apex:tab>
+<apex:tab name="contact" label="contactd" >
+<apex:relatedlist list="Contacts"/>
+</apex:tab>
+
+<apex:tab name="opportunity" label="opppd" >
+<apex:relatedlist list="Opportunities"/>
+</apex:tab>
+
+</apex:tabPanel>
+  
+</apex:page>

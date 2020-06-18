@@ -1,0 +1,17 @@
+<apex:page controller="customwrappercontroller" action="{!Loaddata}" setup="false" sidebar="false" showHeader="true" tabstyle="Customer__c">
+<apex:sectionHeader title="Wrapper Class" subtitle="Leads Contacts Wrapper"/>
+<apex:form >
+<apex:pageBlock title="Leads Contacts Table">
+<apex:pageBlockTable value="{!clr}" var="cw">
+<apex:column value="{!cw.recid}" headerValue="Record Id"/>
+<apex:column value="{!cw.firstname}" headerValue="First name"/>
+<apex:column value="{!cw.lastname}" headerValue="First name"/>
+<apex:column value="{!cw.email}" headerValue="First name"/>
+<apex:column value="{!cw.phone}" headerValue="First name"/>
+
+</apex:pageBlockTable>
+
+
+</apex:pageBlock></apex:form>
+  
+</apex:page>

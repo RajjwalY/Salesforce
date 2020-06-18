@@ -1,0 +1,30 @@
+<apex:page standardcontroller="Candidate__c"  extensions="CandidateExtension" setup="false" sidebar="false" showHeader="true" tabstyle="Candidate__c">
+  <apex:sectionHeader title="{!$Objecttype.Candidate__c.Label} Edit" subtitle="New {!$Objecttype.Candidate__c.Label}"/>
+  <apex:form >
+  <apex:pagemessages id="err"></apex:pagemessages>
+  <apex:pageBlock title="Candidate Pageblock">
+  <apex:pageBlockButtons location="both">
+  <apex:commandButton value="save" action="{!customsave}" rerender="err"/>
+  <apex:commandButton value="cancel" action="{!cancel}" rerender="err"/>
+  </apex:pageBlockButtons>
+  <apex:pageBlockSection title="Information Section" collapsible="true" columns="2">
+  <apex:inputfield value="{!Candidate__c.Name}"/>
+  <apex:inputField value="{!Candidate__c.Location__c}" required="true" />
+  <apex:inputField value="{!Candidate__c.Positionname__c}"/>
+  
+  </apex:pageBlockSection>
+  <apex:pageBlockSection title="Skills" collapsible="true" columns="2">
+  <apex:inputfield value="{!Candidate__c.Skills__c}"/>
+  </apex:pageBlockSection>
+  <apex:pageBlockSection title="Compensation" collapsible="true" columns="2">
+  <apex:inputField value="{!Candidate__c.Current_CTC__c}"/>
+  <apex:inputfield value="{!Candidate__c.Expected_CTC__c}"/>
+  </apex:pageBlockSection>
+  <apex:pageBlockSection title="Contact details" collapsible="true" columns="2">
+   <apex:inputfield value="{!Candidate__c.Email__c}"/> 
+   <apex:inputfield value="{!Candidate__c.Phone__c}"/>  
+  </apex:pageBlockSection>
+  </apex:pageBlock>
+  
+  </apex:form>
+</apex:page>

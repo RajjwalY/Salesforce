@@ -1,0 +1,20 @@
+<apex:page controller="samplecalculator" setup="false" sidebar="false" tabStyle="Opportunity" showHeader="true" >
+<apex:sectionHeader title="Calculator" subtitle="Basic Calculator"/>
+<apex:form >
+<apex:pageMessages id="error"></apex:pageMessages>
+<apex:pageBlock title="sample calculator">
+<apex:pageBlockButtons location="bottom" >
+<apex:commandButton value="Addition" action="{!add}" rerender="res,error"/>
+<apex:commandButton value="Subtraction" action="{!sub}" rerender="res,error"/>
+<apex:commandButton value="Multiplication" action="{!mul}" rerender="res,error" />
+<apex:commandButton value="Division" action="{!div}" rerender="res,error"/>
+<apex:commandButton value="Cancel" />
+</apex:pageBlockButtons>
+<apex:pageblocksection title="Calculator" columns="1" collapsible="true">
+<apex:inputtext label="First Number" value="{!i}" required="true"/>
+<apex:inputtext label="Second Number" value="{!j}" required="true"/>
+<apex:outputLabel id="res">Result is :{!r}</apex:outputLabel>
+</apex:pageblocksection>
+</apex:pageBlock>
+</apex:form> 
+</apex:page>

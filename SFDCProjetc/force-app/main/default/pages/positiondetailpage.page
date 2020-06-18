@@ -1,0 +1,5 @@
+<apex:page standardController="Position__c" setup="false" sidebar="false" showheader="true">
+<apex:detail title="true" inlineEdit="true" showChatter="true" relatedList="false"/> 
+<apex:relatedList list="OpenActivities" pageSize="5"/>
+<apex:relatedList list="candidates__r"/>
+</apex:page>

@@ -1,0 +1,45 @@
+<apex:page setup="false" sidebar="false" tabstyle="Opportunity" showheader="true" standardController="Position__c" >
+  <apex:sectionHeader title="Position" subtitle="EDIT Position"/>
+  <apex:form >
+      <apex:pageBlock title="New Position">
+      
+      <apex:pageBlockButtons location="both">
+      <apex:commandButton value="save" action="{!Save}"/>
+      <apex:commandButton value="cancel"/>
+      </apex:pageBlockButtons>
+      <apex:pageBlockSection title="Position Information" columns="2" collapsible="true">
+      <apex:inputfield value="{!Position__c.Name}"/>
+      <apex:inputfield value="{!Position__c.Location__c}" />
+      <apex:inputField value="{!Position__c.No_Of_Positions__c}"/>
+      <apex:outputLabel ></apex:outputLabel>
+      <apex:inputfield value="{!Position__c.Position_Status__c}"/>
+      <apex:inputfield value="{!Position__c.HR_Email_Id__c}" html-placeholder="enter location"/>
+      <apex:inputfield value="{!Position__c.Hiring_Manager__c}"/>
+      </apex:pageBlockSection>
+      <apex:pageBlockSection title="Compensation" columns="2" collapsible="true">
+      <apex:inputfield value="{!Position__c.Minimum_Pay__c}"/>
+      <apex:inputfield value="{!Position__c.Maximum_Budget__c}"/>
+      </apex:pageBlockSection>
+      
+      <apex:pageBlockSection title="Milestone" columns="2" collapsible="true">
+            <apex:inputfield value="{!Position__c.Open_Date__c}" required="true"/>
+            <apex:inputfield value="{!Position__c.Close_Date__c}"/>
+                  
+      </apex:pageBlockSection>
+      <apex:pageBlockSection title="Additionnal info" columns="2" collapsible="true">
+      <apex:inputfield value="{!Position__c.Travel_Required__c}"/>
+      <apex:inputfield value="{!Position__c.Passport_Required__c}"/>
+      </apex:pageBlockSection>
+      
+      <apex:pageBlockSection title="Position description" columns="1" collapsible="true">
+      <apex:inputfield value="{!Position__c.SkillsRequired__c}"/>
+      <apex:inputfield value="{!Position__c.Position_Description__c}"/>
+      </apex:pageBlockSection>
+     
+      
+      
+      
+      
+      </apex:pageBlock>
+      </apex:form>
+</apex:page>

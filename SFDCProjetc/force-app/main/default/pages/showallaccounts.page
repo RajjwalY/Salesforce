@@ -1,0 +1,15 @@
+<apex:page controller="showallaccounts" action="{!getallacc}" setup="false" sidebar="false" showHeader="true" tabstyle="Account">
+  <apex:form >
+  <apex:sectionHeader title="Accounts" subtitle="Accounts Associated"/>
+  <apex:pageBlock title="ShowAccounts : {!lstacc.size}">
+  <apex:pageblockTable value="{!lstacc}" var="acc">
+  
+  <apex:column value="{!acc.name}"/>
+  <apex:column value="{!acc.rating}"/>
+  <apex:column value="{!acc.type}"/>
+  <apex:column value="{!acc.industry}"/>
+  
+  </apex:pageblockTable>
+  </apex:pageBlock>
+  </apex:form>
+</apex:page>
