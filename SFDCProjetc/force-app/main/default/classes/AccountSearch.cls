@@ -11,6 +11,6 @@ public void AccountSearch(){
     lstacc=[select name,id,phone,rating,annualrevenue,type from account where name like :searchtext];
     
     }
-
+//sdgskfmglskfmglkdfmglskmglskdgm
 }
 }
